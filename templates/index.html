@@ -1,0 +1,94 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>심파고</title>-->
+
+<!--   <script-->
+<!--  src="https://code.jquery.com/jquery-3.7.1.min.js"-->
+<!--  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="-->
+<!--  crossorigin="anonymous"></script>-->
+<!--    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">-->
+<!--</head>-->
+<!--<style>-->
+<!--    body{-->
+<!--    margin:0-->
+<!--    }-->
+<!--    #header{-->
+<!--    padding:20px;-->
+<!--    border-bottom:1px solid rgba(0,0,0,.1)-->
+<!--    }-->
+<!--    #source,#result{-->
+<!--    margin:20px;-->
+<!--    border:1px solid rgba(0,0,0,1)-->
+<!--    }-->
+<!--</style>-->
+<!--<body>-->
+<!--    <div id="header">-->
+<!--        <img src="{{url_for('static', filename='img/simpago_icon.png')}}" width="200" height="50">-->
+<!--    </div>-->
+
+<!--    <div id="source">-->
+<!--        <div id="lang">-->
+<!--            <div>한국어	&#8744;</div>-->
+<!--            <div>영어 &#8744;</div>-->
+<!--        </div>-->
+<!--        <textarea name="trans_src" id="trans_src" placeholder="번역할 내용을 입력하세요."></textarea>-->
+<!--        <div id="trans_btn">-->
+<!--            <button onclick="trans()">번역하기</button>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--    <div id="result">-->
+<!--        <div id="trans_dst">-->
+
+<!--        </div>-->
+<!--        <div id="trans_dst1">-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script>-->
+
+<!--function trans(){-->
+
+
+<!--const transSrc=document.getElementById("trans_src").value;-->
+<!--const data={-->
+<!--trans_src:transSrc}-->
+<!--};-->
+<!--&lt;!&ndash;fetch("{{url_for('translate')}}"),{method:"POST",headers:{'Content-Type':'application/json',},body:JSON.stringify(data)})&ndash;&gt;-->
+<!--&lt;!&ndash;.then(response=>{&ndash;&gt;-->
+<!--&lt;!&ndash;if(!response.ok){&ndash;&gt;-->
+<!--&lt;!&ndash;throw new Error("에러가발생하였습니다");&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;return response.json();&ndash;&gt;-->
+<!--&lt;!&ndash;}).then(data=>document.getElementById("trans_dst").textContent=data.result;)&ndash;&gt;-->
+<!--&lt;!&ndash;.catch(error=>console.log('ERROR',error)})&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--fetch("{{ url_for('translate') }}", {-->
+<!--  method: "POST",-->
+<!--  headers: {-->
+<!--    'Content-Type': 'application/json'-->
+<!--  },-->
+<!--  body: JSON.stringify(data)-->
+<!--})-->
+<!--.then(response => {-->
+<!--  if (!response.ok) {-->
+<!--    throw new Error("에러가 발생하였습니다");-->
+<!--  }-->
+<!--  return response.json();-->
+<!--})-->
+<!--.then(data => {-->
+<!--  document.getElementById("trans_dst").textContent = data.result;-->
+<!--})-->
+<!--.catch(error => {-->
+<!--  console.log('ERROR', error);-->
+<!--});-->
+
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
