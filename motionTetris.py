@@ -8,14 +8,7 @@ import os
 import random
 import numpy as np
 
-'''
-Thank you "Tech With Tim" and "Murtaza's Workshop" for great free python tutorials on youtube that help me so much with this work
-Tech With Tim | Making Tetris Tutorial: https://www.youtube.com/watch?v=uoR4ilCWwKA
-Murtaza's Workshop | Hand Tracking Tutorial: https://www.youtube.com/watch?v=p5Z_GGRCI5s
 
-Tetris game code from github repo: https://gist.github.com/kpkpkps
-With the control mechanism for body movements original creations.
-'''
 
 
 #Getting mediapipe Pose ready
